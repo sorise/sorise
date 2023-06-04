@@ -1,4 +1,4 @@
-**Dducation**：SICNU Undergraduate / USETC doctor
+**Dducation**：SICNU Undergraduate / USETC master
 
 **Occupation**: 学生、 CV工程师、 一个 **C++ Loser**，C#爱好者、React 爱好者！
 
