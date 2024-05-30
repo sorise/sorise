@@ -1,8 +1,31 @@
-### Leetcode 破绽
+## [C++ 宏编程](#)
+> **介绍**：在C和C++中，宏（**Macro**）是由预处理器处理的一种文本替换机制。宏可以在编译之前对代码进行简单的替换和扩展。
+> 它们主要通过 **#define** 指令定义,使用 **#undef** 指令来取消定义，分为**对象宏**和**函数宏**两种，还有一系列的判断指令如 **#ifdef**、**#ifndef**、**#if**、**#elif**、**#else**、**#endif**等。习惯上使用**大写字母** + **下划线:_** 来表示宏定义。
 
-----
 
-- [1.  三数之和](https://leetcode.cn/problems/3sum/)
-- [2. 接雨水](https://leetcode.cn/problems/trapping-rain-water/description/)
-  - [前后缀 直接秒 bilibili 视频](https://www.bilibili.com/video/BV1Qg411q7ia/ )
-- [3. 找到字符串中所有字母异位词](https://leetcode.cn/problems/find-all-anagrams-in-a-string/description/)
+### [1. 预处理器](#)
+预处理器是将源文件的文本作为翻译的第一阶段操作的**文本处理器**，在将 C 和 C++ 文件传递到编译器之前，预处理器将对这些文件执行预先操作。
+可以使用预处理器有**条件地编译代码**、**插入文件**、指定编译时错误消息以及将计算机特定规则应用于代码节。
+
+主要有三类内容：
+* 预处理指令
+* 预处理器运算符
+* 预定义宏
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 参考资料
+* [Visual Studio 2022 C/C++ 预处理器参考](https://learn.microsoft.com/zh-cn/cpp/preprocessor/c-cpp-preprocessor-reference?view=msvc-170)
