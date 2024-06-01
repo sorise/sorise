@@ -1,4 +1,4 @@
-## [依赖注入(Dependency Injection)](#)
+### [依赖注入(Dependency Injection)](#)
 > **介绍**：是一种软件设计模式，也是实现控制反转的其中一种技术。這种模式能让一个物件接收它所依赖的其他物件。**依赖** 是指接收方所需的对象。**注入** 是指将 **依赖** 传递给接收方的过程。
 **此模式确保了任何想要使用给定服务的物件不需要知道如何建立這些服务**。
 ----
@@ -6,7 +6,7 @@
 ### [1. 基本概念](#)
 **依赖注入** 这种技术手段实现功能模块对其依赖组件的**控制反转**,将 **依赖组件** 的配置和使用分离开。
 
-组件和服务：
+**组件和服务:** 
 * 组件是一种独立的、可重用的软件模块，它封装了某一特定功能或一组相关功能。
 * 服务是一种独立的功能单元，它通过网络或其他通信机制向其他系统或组件提供特定的功能。
 
@@ -22,12 +22,32 @@
 * 属性注入（ Setter Injection）
 * 方法注入（ Interface Injection）
 
+```cpp
+class UserController{
+private:
+    MysqlConnectionService service; //数据库服务
+
+    UserController(){
+        service = MysqlConnectionService("127.0.0.1",3306, "root", "123456", "test");
+    }
+};
+// 使用构造注入
+class UserController{
+private:
+    MysqlConnectionService service; //数据库服务
+
+    UserController(MysqlConnectionService _service){
+        service = _service;
+    }
+};
+```
+
 #### 1.1 控制反转简析
 控制反转IoC(Inversion of Control)是说创建对象的控制权进行转移 **(获得依赖对象的方式反转了)** ，以前创建对象的主动权和创建时机是由自己把控的，而现在这种权力转移到第三方，比如转移交给了IoC容器，它就是一个专门用来创建对象的工厂...。
 
 > 控制反转（创建对象实例的控制权反转），说的是一个类A要调用另一个类B，本来应该在类A里面创建B的实例的，控制权在A手里。现在用了Spring了，有了IOC，控制权就不在A手里了，而是交到Spring的IOC容器了，A要用到B，那Spring就把B分给A了。
 
-
+IoC的一个重点是在系统运行中，动态的向某个对象提供它所需要的其他对象。这一点是通过DI（Dependency Injection，依赖注入）来实现的。
 
 
 ### 参考资料
